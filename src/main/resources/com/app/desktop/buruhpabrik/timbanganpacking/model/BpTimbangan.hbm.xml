@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 28, 2016 3:37:49 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.app.desktop.buruhpabrik.timbanganpacking.model.BpTimbangan" table="bp_timbangan" catalog="dbtimbanganpackingdb" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="tanggal" type="date">
+            <column name="tanggal" length="10" />
+        </property>
+        <property name="mill" type="java.lang.Integer">
+            <column name="mill" />
+        </property>
+        <property name="urutNo" type="string">
+            <column name="urut_no" length="50" />
+        </property>
+        <property name="berat" type="big_decimal">
+            <column name="berat" precision="18" />
+        </property>
+        <property name="beratPapan" type="big_decimal">
+            <column name="berat_papan" precision="18" />
+        </property>
+        <property name="pallete" type="java.lang.Integer">
+            <column name="pallete" />
+        </property>
+        <property name="jumlahCones" type="big_decimal">
+            <column name="jumlah_cones" precision="18" />
+        </property>
+        <property name="newpack" type="big_decimal">
+            <column name="newpack" precision="18" />
+        </property>
+        <property name="hapus" type="int">
+            <column name="hapus" not-null="true" />
+        </property>
+        <property name="createdBy" type="java.lang.Integer">
+            <column name="created_by" />
+        </property>
+        <property name="updatedBy" type="java.lang.Integer">
+            <column name="updated_by" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="19" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
