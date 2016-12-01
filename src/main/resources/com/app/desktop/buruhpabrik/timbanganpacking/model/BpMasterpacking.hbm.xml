@@ -26,9 +26,9 @@
         <property name="tanggal" type="date">
             <column name="tanggal" length="10" not-null="true" />
         </property>
-        <property name="standarId" type="int">
+        <many-to-one name="BpStandar" class="com.app.desktop.buruhpabrik.timbanganpacking.model.BpStandar" fetch="select">
             <column name="standar_id" not-null="true" />
-        </property>
+        </many-to-one>
         <property name="hapus" type="int">
             <column name="hapus" not-null="true" />
         </property>

@@ -18,7 +18,7 @@ public class BpMasterpacking  implements java.io.Serializable {
      private BigDecimal tara;
      private BigDecimal taraCones;
      private Date tanggal;
-     private int standarId;
+     private BpStandar bpStandar;
      private int hapus;
      private Integer createdBy;
      private Integer updatedBy;
@@ -29,21 +29,21 @@ public class BpMasterpacking  implements java.io.Serializable {
     }
 
 	
-    public BpMasterpacking(String materialNo, String batch, Date tanggal, int standarId, int hapus) {
+    public BpMasterpacking(String materialNo, String batch, Date tanggal, BpStandar bpStandar, int hapus) {
         this.materialNo = materialNo;
         this.batch = batch;
         this.tanggal = tanggal;
-        this.standarId = standarId;
+        this.bpStandar = bpStandar;
         this.hapus = hapus;
     }
-    public BpMasterpacking(String materialNo, String warna, String batch, BigDecimal tara, BigDecimal taraCones, Date tanggal, int standarId, int hapus, Integer createdBy, Integer updatedBy, Date createDate, Date updateDate) {
+    public BpMasterpacking(String materialNo, String warna, String batch, BigDecimal tara, BigDecimal taraCones, Date tanggal, BpStandar bpStandar, int hapus, Integer createdBy, Integer updatedBy, Date createDate, Date updateDate) {
        this.materialNo = materialNo;
        this.warna = warna;
        this.batch = batch;
        this.tara = tara;
        this.taraCones = taraCones;
        this.tanggal = tanggal;
-       this.standarId = standarId;
+       this.bpStandar = bpStandar;
        this.hapus = hapus;
        this.createdBy = createdBy;
        this.updatedBy = updatedBy;
@@ -99,13 +99,13 @@ public class BpMasterpacking  implements java.io.Serializable {
     
     public void setTanggal(Date tanggal) {
         this.tanggal = tanggal;
+    } 
+    public BpStandar getBpStandar() {
+        return bpStandar;
     }
-    public int getStandarId() {
-        return this.standarId;
-    }
-    
-    public void setStandarId(int standarId) {
-        this.standarId = standarId;
+
+    public void setBpStandar(BpStandar bpStandar) {
+        this.bpStandar = bpStandar;
     }
     public int getHapus() {
         return this.hapus;
